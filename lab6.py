@@ -7,9 +7,14 @@ def encode(data):
     return encoded_pw
 
 
+# Nathan King
+def decode(encoded_pw):
+    empty_string=''
+    for i in encoded_pw:
+        empty_string += str((int(i)+7) % 10)
+    return empty_string
 
 def main():
-
     menu = ['Encode',
             'Decode',
             'Quit']
@@ -41,4 +46,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
